@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -34,13 +39,50 @@
                     <view key="view" contentMode="scaleToFill" id="K9E-MF-eN0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhO-39-zCl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFv-Mk-On6">
+                                        <rect key="frame" x="12" y="47" width="24" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="XQz-iA-cSl"/>
+                                            <constraint firstAttribute="height" constant="18" id="cyz-G3-kdz"/>
+                                        </constraints>
+                                        <state key="normal" image="smackBurger"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Baa-W9-xtz">
+                                        <rect key="frame" x="159" y="46" width="56" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.30196078431372547" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="nFv-Mk-On6" firstAttribute="leading" secondItem="xhO-39-zCl" secondAttribute="leading" constant="12" id="He1-j6-RZA"/>
+                                    <constraint firstItem="Baa-W9-xtz" firstAttribute="centerY" secondItem="nFv-Mk-On6" secondAttribute="centerY" id="MAu-y6-btG"/>
+                                    <constraint firstAttribute="bottom" secondItem="nFv-Mk-On6" secondAttribute="bottom" constant="12" id="a1f-sP-p3U"/>
+                                    <constraint firstAttribute="height" constant="77" id="bXt-pC-bhh"/>
+                                    <constraint firstItem="Baa-W9-xtz" firstAttribute="centerX" secondItem="xhO-39-zCl" secondAttribute="centerX" id="u0j-4G-mgR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xhO-39-zCl" firstAttribute="leading" secondItem="yA4-jD-4JS" secondAttribute="leading" id="9CO-8i-tp0"/>
+                            <constraint firstItem="xhO-39-zCl" firstAttribute="top" secondItem="K9E-MF-eN0" secondAttribute="top" id="bcf-kl-gAC"/>
+                            <constraint firstItem="xhO-39-zCl" firstAttribute="trailing" secondItem="yA4-jD-4JS" secondAttribute="trailing" id="w7j-2b-yZw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yA4-jD-4JS"/>
                     </view>
+                    <connections>
+                        <outlet property="menuBtn" destination="nFv-Mk-On6" id="KOC-JI-oGa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZM-zZ-0LF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="503"/>
+            <point key="canvasLocation" x="1461.5999999999999" y="457.42128935532236"/>
         </scene>
         <!--ChannelVC-->
         <scene sceneID="hWV-Ft-H9d">
@@ -55,7 +97,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaB-TZ-wsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="-250"/>
+            <point key="canvasLocation" x="1462" y="-256"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="smackBurger" width="40" height="40"/>
+    </resources>
 </document>
