@@ -23,12 +23,14 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
-    func collectionView(_collectionView: UICollectionView, cellForItemAtIndexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "avatarCell", for: indexPath) as? AvatarCell {
             return cell
         }
         return AvatarCell()
     }
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

@@ -520,7 +520,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cLO-VZ-j1l">
                                 <rect key="frame" x="107.5" y="21" width="160" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="cQT-v3-5Qg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="cQT-v3-5Qg"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Dark"/>
