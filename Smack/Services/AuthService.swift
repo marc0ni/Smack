@@ -88,16 +88,18 @@ class AuthService {
                 }*/
                 
                 //Using SwiftyJSON
-                guard let data = response.data else { return }
-                let json = try JSON(data: data)
-                self.userEmail = json["user"].stringValue
-                self.authToken = json["token"].stringValue
-                
-                self.isLoggedIn = true
-                completion(true)
-            } else {
-                completion(false)
-                debugPrint(response.result.error as Any)
+                do {
+                    guard let data = response.data else { return }
+                    let json = try JSON(data: data)
+                    self.userEmail = json["user"].stringValue
+                    self.authToken = json["token"].stringValue
+                    self.isLoggedIn = true
+                    completion(true)
+                    
+                } catch {
+                    completion(false)
+                    debugPrint(response.result.error as Any)
+                }
             }
         }
     }
