@@ -46,9 +46,9 @@ class UserDataService {
         let defaultColor = UIColor.lightGray
         
         guard let rUnwrapped = r else {return defaultColor}
-        guard let gUnwrapped = r else {return defaultColor}
-        guard let bUnwrapped = r else {return defaultColor}
-        guard let aUnwrapped = r else {return defaultColor}
+        guard let gUnwrapped = g else {return defaultColor}
+        guard let bUnwrapped = b else {return defaultColor}
+        guard let aUnwrapped = a else {return defaultColor}
         
         let rfloat = CGFloat(rUnwrapped.doubleValue)
         let gfloat = CGFloat(gUnwrapped.doubleValue)
