@@ -17,10 +17,13 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var userImg: UIImageView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    
     //Variables
     var avatarName = "profileDefault"
     var avatarColor = "[0.5, 0.5. 0.5, 1]"
     var bgColor : UIColor?
+    var darkBGColor = CGFloat(arc4random_uniform(85)) / 255
+    var lightBGColor = CGFloat(arc4random_uniform(170) + 85) / 255
     
     override func viewDidLoad() {
         super.viewDidLoad()
