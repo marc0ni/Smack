@@ -21,8 +21,6 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-
-        
     }
     
     func collectionView(_ collectionView: UICollectionView,
