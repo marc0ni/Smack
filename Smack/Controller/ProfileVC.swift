@@ -25,7 +25,10 @@ class ProfileVC: UIViewController {
     
     @IBAction func closeModalPressed(_ sender: Any) {
     }
+    
+
     @IBAction func logoutPressed(_ sender: Any) {
+    
     }
     
 }
