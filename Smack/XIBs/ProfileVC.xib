@@ -31,7 +31,7 @@
             <subviews>
                 <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRQ-2j-ErV" userLabel="bgView">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.94999999999999996"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZc-E1-D2B">
@@ -97,15 +97,15 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="TRQ-2j-ErV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5X6-X9-gHB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TRQ-2j-ErV" secondAttribute="trailing" id="5n2-vc-1uF"/>
                 <constraint firstItem="NZc-E1-D2B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="21" id="9ag-Gt-brm"/>
+                <constraint firstItem="TRQ-2j-ErV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VLz-st-yPe"/>
                 <constraint firstItem="NZc-E1-D2B" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="chQ-Fl-ERa"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TRQ-2j-ErV" secondAttribute="bottom" id="hhZ-Bx-nPE"/>
-                <constraint firstItem="TRQ-2j-ErV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tM8-SO-wWK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TRQ-2j-ErV" secondAttribute="bottom" id="fmH-do-Foi"/>
+                <constraint firstItem="TRQ-2j-ErV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jO0-g1-KbB"/>
                 <constraint firstItem="NZc-E1-D2B" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="vpF-np-Sh6"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TRQ-2j-ErV" secondAttribute="trailing" id="xrv-YE-rj1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="54.5"/>

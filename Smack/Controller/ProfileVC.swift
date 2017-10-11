@@ -19,11 +19,14 @@ class ProfileVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        // Show user's avatar (profileImg = avatar)
+        // Show user's name (userName text to label)
+        // Show user's email (user email text to label)
     }
     
     @IBAction func closeModalPressed(_ sender: Any) {
+        //Dismiss modal to ChannelVC
+        //Resume Lesson 80 @ 14:49
     }
     
 
