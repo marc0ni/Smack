@@ -280,6 +280,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createAcctBtnPressed:" destination="Esj-Dm-exY" eventType="touchUpInside" id="mpb-fs-A7M"/>
+                                    <action selector="loginPressed:" destination="Esj-Dm-exY" eventType="touchUpInside" id="WHj-Af-2gl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7O-C6-9V5">
@@ -303,6 +304,11 @@
                                     <action selector="closePressed:" destination="Esj-Dm-exY" eventType="touchUpInside" id="bW2-Hx-edP"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ni1-CD-mkJ">
+                                <rect key="frame" x="169" y="246" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -320,6 +326,9 @@
                         <viewLayoutGuide key="safeArea" id="3p4-5W-npu"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTxt" destination="Vtr-Dp-Lm5" id="zv1-Z7-ePr"/>
+                        <outlet property="spinner" destination="Ni1-CD-mkJ" id="06q-NU-ozx"/>
+                        <outlet property="usernameTxt" destination="ITq-9B-0wh" id="GeC-uE-SYw"/>
                         <segue destination="dse-Ua-zuV" kind="show" identifier="toCreateAccount" action="showDetailViewController:sender:" id="600-5Y-cAQ"/>
                     </connections>
                 </viewController>
@@ -465,7 +474,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5gq-JQ-hnD">
-                                <rect key="frame" x="169" y="515" width="37" height="37"/>
+                                <rect key="frame" x="169" y="518" width="37" height="31"/>
                                 <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -473,10 +482,12 @@
                         <constraints>
                             <constraint firstItem="t9H-RV-yyu" firstAttribute="top" secondItem="Caf-OC-cWp" secondAttribute="top" id="3y1-zQ-rhu"/>
                             <constraint firstItem="Hd7-iL-r9D" firstAttribute="centerX" secondItem="McM-fT-TTD" secondAttribute="centerX" id="Buj-d6-axT"/>
+                            <constraint firstItem="5gq-JQ-hnD" firstAttribute="centerX" secondItem="McM-fT-TTD" secondAttribute="centerX" id="CWE-3G-RQx"/>
                             <constraint firstItem="Caf-OC-cWp" firstAttribute="top" secondItem="SjM-RN-5CG" secondAttribute="bottom" constant="40" id="CsU-kk-W4h"/>
                             <constraint firstItem="Whn-Ti-1Se" firstAttribute="top" secondItem="t9H-RV-yyu" secondAttribute="bottom" constant="4" id="EjR-xE-Bmd"/>
                             <constraint firstItem="5gq-JQ-hnD" firstAttribute="centerY" secondItem="McM-fT-TTD" secondAttribute="centerY" constant="200" id="Glw-qf-OHS"/>
                             <constraint firstItem="5gq-JQ-hnD" firstAttribute="centerX" secondItem="McM-fT-TTD" secondAttribute="centerX" id="JS0-Ae-n9Z"/>
+                            <constraint firstItem="BHb-0V-aBC" firstAttribute="top" secondItem="5gq-JQ-hnD" secondAttribute="bottom" constant="48" id="KRz-UJ-5nW"/>
                             <constraint firstItem="t9H-RV-yyu" firstAttribute="centerX" secondItem="McM-fT-TTD" secondAttribute="centerX" id="Lq0-aG-YdZ"/>
                             <constraint firstItem="oRC-dU-qGs" firstAttribute="trailing" secondItem="IUx-cM-7AI" secondAttribute="trailing" constant="16" id="P5e-8E-mxK"/>
                             <constraint firstItem="BHb-0V-aBC" firstAttribute="centerX" secondItem="McM-fT-TTD" secondAttribute="centerX" id="WyX-SC-xRe"/>
