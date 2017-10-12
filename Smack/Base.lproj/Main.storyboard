@@ -225,7 +225,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-vH-eqP" userLabel="Textfield Stack">
                                 <rect key="frame" x="63" y="160" width="250" height="86"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ITq-9B-0wh">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ITq-9B-0wh" userLabel="Username Txt">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="zNH-8z-tjR"/>
@@ -326,9 +326,9 @@
                         <viewLayoutGuide key="safeArea" id="3p4-5W-npu"/>
                     </view>
                     <connections>
-                        <outlet property="emailTxt" destination="ITq-9B-0wh" id="T09-pX-ItC"/>
                         <outlet property="passwordTxt" destination="Vtr-Dp-Lm5" id="zv1-Z7-ePr"/>
                         <outlet property="spinner" destination="Ni1-CD-mkJ" id="06q-NU-ozx"/>
+                        <outlet property="usernameTxt" destination="ITq-9B-0wh" id="8Jf-aC-dPh"/>
                         <segue destination="dse-Ua-zuV" kind="show" identifier="toCreateAccount" action="showDetailViewController:sender:" id="600-5Y-cAQ"/>
                     </connections>
                 </viewController>
