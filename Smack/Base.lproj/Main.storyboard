@@ -204,7 +204,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="NEm-34-Ezl">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="NEm-34-Ezl" userLabel="Logo Stack">
                                 <rect key="frame" x="126.5" y="80" width="122.5" height="40"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackLogo" translatesAutoresizingMaskIntoConstraints="NO" id="PqF-jP-l13">
@@ -222,10 +222,10 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-vH-eqP">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-vH-eqP" userLabel="Textfield Stack">
                                 <rect key="frame" x="63" y="160" width="250" height="86"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ITq-9B-0wh">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ITq-9B-0wh">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="zNH-8z-tjR"/>
@@ -263,7 +263,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXf-49-tp2" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
-                                <rect key="frame" x="63" y="286" width="250" height="50"/>
+                                <rect key="frame" x="62" y="320" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="3zu-Xr-MsA"/>
@@ -279,12 +279,22 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="createAcctBtnPressed:" destination="Esj-Dm-exY" eventType="touchUpInside" id="mpb-fs-A7M"/>
                                     <action selector="loginPressed:" destination="Esj-Dm-exY" eventType="touchUpInside" id="WHj-Af-2gl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9h-IY-opc">
+                                <rect key="frame" x="331" y="20" width="28" height="28"/>
+                                <state key="normal" image="closeButton"/>
+                                <connections>
+                                    <action selector="closePressed:" destination="Esj-Dm-exY" eventType="touchUpInside" id="bW2-Hx-edP"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ni1-CD-mkJ">
+                                <rect key="frame" x="169" y="258" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7O-C6-9V5">
-                                <rect key="frame" x="62.5" y="336" width="250" height="30"/>
+                                <rect key="frame" x="62" y="378" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6zY-zR-36T"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="pCd-0M-egI"/>
@@ -297,38 +307,28 @@
                                     <action selector="createAcctBtnPressed:" destination="Esj-Dm-exY" eventType="touchUpInside" id="md1-EG-jMT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9h-IY-opc">
-                                <rect key="frame" x="331" y="20" width="28" height="28"/>
-                                <state key="normal" image="closeButton"/>
-                                <connections>
-                                    <action selector="closePressed:" destination="Esj-Dm-exY" eventType="touchUpInside" id="bW2-Hx-edP"/>
-                                </connections>
-                            </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ni1-CD-mkJ">
-                                <rect key="frame" x="169" y="246" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TXf-49-tp2" firstAttribute="top" secondItem="ef5-vH-eqP" secondAttribute="bottom" constant="40" id="1aw-D6-hYI"/>
-                            <constraint firstItem="TXf-49-tp2" firstAttribute="centerX" secondItem="6mX-fC-FcW" secondAttribute="centerX" id="2bZ-WI-zCx"/>
+                            <constraint firstItem="U7O-C6-9V5" firstAttribute="top" secondItem="TXf-49-tp2" secondAttribute="bottom" constant="8" id="5qX-By-Xrb"/>
                             <constraint firstItem="NEm-34-Ezl" firstAttribute="centerX" secondItem="6mX-fC-FcW" secondAttribute="centerX" id="62m-J3-jDp"/>
+                            <constraint firstItem="TXf-49-tp2" firstAttribute="centerX" secondItem="6mX-fC-FcW" secondAttribute="centerX" id="9o6-HM-mEN"/>
                             <constraint firstItem="3p4-5W-npu" firstAttribute="trailing" secondItem="t9h-IY-opc" secondAttribute="trailing" constant="16" id="AIF-zw-q13"/>
                             <constraint firstItem="t9h-IY-opc" firstAttribute="top" secondItem="3p4-5W-npu" secondAttribute="top" id="E2P-Vb-ndu"/>
+                            <constraint firstItem="Ni1-CD-mkJ" firstAttribute="centerX" secondItem="6mX-fC-FcW" secondAttribute="centerX" id="H3H-Am-dwJ"/>
+                            <constraint firstItem="Ni1-CD-mkJ" firstAttribute="top" secondItem="ef5-vH-eqP" secondAttribute="bottom" constant="12" id="QlX-XV-3vO"/>
                             <constraint firstItem="ef5-vH-eqP" firstAttribute="top" secondItem="NEm-34-Ezl" secondAttribute="bottom" constant="40" id="SLo-wx-OSf"/>
-                            <constraint firstItem="U7O-C6-9V5" firstAttribute="centerX" secondItem="6mX-fC-FcW" secondAttribute="centerX" id="UjU-Tx-VkU"/>
+                            <constraint firstItem="TXf-49-tp2" firstAttribute="top" secondItem="Ni1-CD-mkJ" secondAttribute="bottom" constant="25" id="Zyb-aS-xQI"/>
+                            <constraint firstItem="U7O-C6-9V5" firstAttribute="centerX" secondItem="6mX-fC-FcW" secondAttribute="centerX" id="cNE-eb-Vyx"/>
                             <constraint firstItem="NEm-34-Ezl" firstAttribute="top" secondItem="3p4-5W-npu" secondAttribute="top" constant="60" id="fIp-WN-aSw"/>
-                            <constraint firstItem="U7O-C6-9V5" firstAttribute="top" secondItem="TXf-49-tp2" secondAttribute="bottom" id="oBa-Wi-nai"/>
                             <constraint firstItem="ef5-vH-eqP" firstAttribute="centerX" secondItem="6mX-fC-FcW" secondAttribute="centerX" id="oJR-pb-N1Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3p4-5W-npu"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="ITq-9B-0wh" id="T09-pX-ItC"/>
                         <outlet property="passwordTxt" destination="Vtr-Dp-Lm5" id="zv1-Z7-ePr"/>
                         <outlet property="spinner" destination="Ni1-CD-mkJ" id="06q-NU-ozx"/>
-                        <outlet property="usernameTxt" destination="ITq-9B-0wh" id="GeC-uE-SYw"/>
                         <segue destination="dse-Ua-zuV" kind="show" identifier="toCreateAccount" action="showDetailViewController:sender:" id="600-5Y-cAQ"/>
                     </connections>
                 </viewController>
