@@ -18,6 +18,7 @@ class ChannelVC: UIViewController {
         
     }
    
+    //View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
@@ -33,8 +34,6 @@ class ChannelVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         setupUserInfo()
     }
-    
-    
     
     @objc func userDataDidChange(_ notif: Notification) {
         setupUserInfo()
@@ -52,6 +51,24 @@ class ChannelVC: UIViewController {
         }
     }
     
+    //TableView Methods
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //IBActions
     @IBAction func addChannelPressed(_ sender: Any) {
         let addChannel = AddChannelVC()
         addChannel.modalPresentationStyle = .custom
