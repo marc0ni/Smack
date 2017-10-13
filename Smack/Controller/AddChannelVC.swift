@@ -21,11 +21,17 @@ class AddChannelVC: UIViewController {
     }
     
     @IBAction func closeModalPressed(_ sender: Any) {
-        
+         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func createChannelPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        guard let channelName = nameTxt.text, nameTxt.text != "" else { return }
+        guard let chanDesc = chanDesc.text else { return }
+        SocketService.instance.addChannel(channelName: channelName, channelDescription: channelDesc) { (success) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     func setUpView() {

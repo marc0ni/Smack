@@ -13,7 +13,7 @@ class ChannelVC: UIViewController {
     //Outlets
     @IBOutlet weak var loginBtn: UIButton!
      @IBOutlet weak var userImg: CircleImage!
-    
+    @IBOutlet weak var tableView: UITableView!
     @IBAction func prepareForUnwind(segue:UIStoryboardSegue) {
         
     }
@@ -22,11 +22,19 @@ class ChannelVC: UIViewController {
         super.viewDidLoad()
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        
+        SocketService.instance.getChannel { (success) in
+            if success {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         setupUserInfo()
     }
+    
+    
     
     @objc func userDataDidChange(_ notif: Notification) {
         setupUserInfo()

@@ -118,7 +118,7 @@
                                 <rect key="frame" x="0.0" y="125" width="375" height="427"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="u9s-G0-nda">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="channelCell" id="u9s-G0-nda" customClass="channelCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u9s-G0-nda" id="DVL-U9-pMd">
@@ -191,6 +191,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="dUZ-tR-sfg" id="E2J-r1-vde"/>
+                        <outlet property="tableView" destination="SpG-ZK-VwD" id="2VL-7K-3qf"/>
                         <outlet property="userImg" destination="vE4-rr-Vhg" id="dD3-Fn-Mp7"/>
                         <segue destination="Esj-Dm-exY" kind="show" identifier="toLogin" id="Oll-jJ-s4l"/>
                     </connections>
