@@ -118,11 +118,11 @@
                                 <rect key="frame" x="0.0" y="125" width="375" height="427"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="u9s-G0-nda" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" rowHeight="45" id="u9s-G0-nda" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u9s-G0-nda" id="DVL-U9-pMd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c89-GJ-t17">
@@ -134,7 +134,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c89-GJ-t17" secondAttribute="trailingMargin" id="1bj-Kn-wYU"/>
-                                                <constraint firstItem="c89-GJ-t17" firstAttribute="centerY" secondItem="DVL-U9-pMd" secondAttribute="centerY" id="MHj-At-FVG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="c89-GJ-t17" secondAttribute="bottom" constant="5" id="AOd-n7-GXL"/>
+                                                <constraint firstItem="c89-GJ-t17" firstAttribute="top" secondItem="DVL-U9-pMd" secondAttribute="topMargin" constant="4" id="eB1-81-ucM"/>
                                                 <constraint firstItem="c89-GJ-t17" firstAttribute="leading" secondItem="DVL-U9-pMd" secondAttribute="leadingMargin" constant="20" id="x2h-bV-FA7"/>
                                             </constraints>
                                         </tableViewCellContentView>
