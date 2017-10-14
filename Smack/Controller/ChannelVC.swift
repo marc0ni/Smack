@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ChannelVC: UIViewController {
+class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //Outlets
     @IBOutlet weak var loginBtn: UIButton!
-     @IBOutlet weak var userImg: CircleImage!
+    @IBOutlet weak var userImg: CircleImage!
     @IBOutlet weak var tableView: UITableView!
     @IBAction func prepareForUnwind(segue:UIStoryboardSegue) {
         
@@ -23,6 +23,9 @@ class ChannelVC: UIViewController {
         super.viewDidLoad()
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        
+        tableView.dataSource = self
+        tableView.delegate = self
         
         SocketService.instance.getChannel { (success) in
             if success {
@@ -53,20 +56,17 @@ class ChannelVC: UIViewController {
     
     //TableView Methods
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        <#code#>
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
     
     //IBActions
     @IBAction func addChannelPressed(_ sender: Any) {

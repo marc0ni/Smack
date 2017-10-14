@@ -43,5 +43,4 @@ class SocketService: NSObject {
             completion(true)
         }
     }
-
 }
