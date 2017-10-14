@@ -25,7 +25,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="Dwu-Rc-QEN">
                                 <rect key="frame" x="37.5" y="83.5" width="300" height="300"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-iPadPro-3" translatesAutoresizingMaskIntoConstraints="NO" id="UO0-ys-bs2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smack1024" translatesAutoresizingMaskIntoConstraints="NO" id="UO0-ys-bs2">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="3C9-Bk-KCt"/>
@@ -58,6 +58,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-iPadPro-3" width="83" height="83"/>
+        <image name="smack1024" width="1024" height="1024"/>
     </resources>
 </document>
