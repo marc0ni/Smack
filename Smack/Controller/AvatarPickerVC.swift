@@ -10,19 +10,22 @@ import UIKit
 
 class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    //Outlets
+//Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
-    //Variables
+//Variables
     var avatarType = AvatarType.dark
     
+//View Method
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
     }
     
+    
+//CollectionView Methods
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "avatarCell", for: indexPath) as? AvatarCell {
@@ -38,19 +41,6 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 28
-    }
-    
-    @IBAction func backPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func segmentControlChanged(_ sender: Any) {
-        if segmentControl.selectedSegmentIndex == 0 {
-            avatarType = .dark
-        } else {
-            avatarType = .light
-        }
-        collectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -73,6 +63,21 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
             UserDataService.instance.setAvatarName(avatarName: "light\(indexPath.item)")
         }
         self.dismiss(animated:true, completion: nil)
+    }
+    
+    
+//IBAction Methods
+    @IBAction func backPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func segmentControlChanged(_ sender: Any) {
+        if segmentControl.selectedSegmentIndex == 0 {
+            avatarType = .dark
+        } else {
+            avatarType = .light
+        }
+        collectionView.reloadData()
     }
 }
 

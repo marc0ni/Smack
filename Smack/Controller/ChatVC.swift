@@ -10,9 +10,11 @@ import UIKit
 
 class ChatVC: UIViewController {
     
-    //Outlets    
+//Outlets
     @IBOutlet weak var menuBtn: UIButton!
     
+
+//View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)

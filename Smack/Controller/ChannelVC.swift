@@ -14,11 +14,9 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var userImg: CircleImage!
     @IBOutlet weak var tableView: UITableView!
-    @IBAction func prepareForUnwind(segue:UIStoryboardSegue) {
-        
-    }
+    
    
-    //View Methods
+//View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -55,7 +53,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    //TableView Methods
+//TableView Methods
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell {
             let channel = MessageService.instance.channels[indexPath.row]
@@ -74,7 +72,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return MessageService.instance.channels.count
     }
     
-    //IBActions
+//IBActions
+    
+    @IBAction func prepareForUnwind(segue:UIStoryboardSegue) {
+        
+    }
+    
     @IBAction func addChannelPressed(_ sender: Any) {
         let addChannel = AddChannelVC()
         addChannel.modalPresentationStyle = .custom

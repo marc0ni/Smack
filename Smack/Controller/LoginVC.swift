@@ -15,11 +15,22 @@ class LoginVC: UIViewController {
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    
+ 
+//View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
     }
-
+    
+    func setUpView() {
+        spinner.isHidden = true
+        usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+        passwordTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+    }
+    
+    
+//IBActions
     @IBAction func loginPressed(_ sender: Any) {
         spinner.isHidden = false
         spinner.startAnimating()
@@ -49,10 +60,6 @@ class LoginVC: UIViewController {
         performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
     }
     
-    func setUpView() {
-        spinner.isHidden = true
-        usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
-        passwordTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
-    }
+
     
 }

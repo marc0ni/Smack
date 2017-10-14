@@ -10,18 +10,21 @@ import UIKit
 
 class ProfileVC: UIViewController {
     
-    //Outlets
+//Outlets
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userEmail: UILabel!
     @IBOutlet weak var bgView: UIView!
     
 
+//View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
     
+    
+//IBAction Methods
     @IBAction func closeModalPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -40,12 +43,9 @@ class ProfileVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-   
-
     @IBAction func logoutPressed(_ sender: Any) {
         UserDataService.instance.logoutUser()
         NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object:nil)
         dismiss(animated: true, completion: nil)
     }
-    
 }

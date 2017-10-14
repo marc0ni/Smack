@@ -10,7 +10,7 @@ import UIKit
 
 class CreateAccountVC: UIViewController {
     
-    //Outlets
+//Outlets
     @IBOutlet weak var usernameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
@@ -18,17 +18,18 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     
-    //Variables
+//Variables
     var avatarName = "profileDefault"
     var avatarColor = "[0.5, 0.5. 0.5, 1]"
     var bgColor : UIColor?
     var darkBGColor = CGFloat(arc4random_uniform(85)) / 255
     var lightBGColor = CGFloat(arc4random_uniform(170) + 85) / 255
     
+    
+//View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,6 +42,24 @@ class CreateAccountVC: UIViewController {
         }
     }
     
+    func setupView() {
+        spinner.isHidden = true
+        usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+        
+        emailTxt.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+        
+        passwordTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CreateAccountVC.handleTap))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+    
+    
+//IBActions
     @IBAction func closePressed(_ sender: Any) {
         performSegue(withIdentifier: UNWIND, sender: nil)
     }
@@ -88,19 +107,5 @@ class CreateAccountVC: UIViewController {
         }
     }
     
-    func setupView() {
-        spinner.isHidden = true
-        usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
-        
-        emailTxt.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
-        
-        passwordTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(CreateAccountVC.handleTap))
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func handleTap() {
-        view.endEditing(true)
-    }
+
 }
