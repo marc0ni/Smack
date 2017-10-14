@@ -21,11 +21,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         
-        tableView.dataSource = self
-        tableView.delegate = self
+        
         
         SocketService.instance.getChannel { (success) in
             if success {
@@ -55,17 +56,22 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     //TableView Methods
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell {
+            let channel = MessageService.instance.channels[indexPath.row]
+            cell.configureCell(channel: channel)
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        <#code#>
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        return MessageService.instance.channels.count
     }
     
     //IBActions
