@@ -64,7 +64,7 @@
                             <rect key="frame" x="96.5" y="105" width="140.5" height="150.5"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="bjR-tt-x8T" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
-                                    <rect key="frame" x="7.5" y="0.0" width="125" height="125"/>
+                                    <rect key="frame" x="8" y="0.0" width="125" height="125"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="125" id="QED-K1-juc"/>
                                         <constraint firstAttribute="width" constant="125" id="kXH-0e-tYF"/>
