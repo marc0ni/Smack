@@ -75,7 +75,7 @@ class MessageService {
                 debugPrint(self.messages)
                 completion(true)
                 
-                
+                //Following is the JSON parsing w/o SwiftyJSON. The Do/Try/Catch error handling was unclear for this technique, which is why I used the more compact code block just above.
                 /*if let json = JSON(data: data).array {
                     for item in json {
                         let messageBody = item["messageBody"].stringValue

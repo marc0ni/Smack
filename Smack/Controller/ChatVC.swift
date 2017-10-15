@@ -18,13 +18,18 @@ class ChatVC: UIViewController {
 //View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Keyboard Methods
         view.bindToKeyboard()
         let tap = UITapGestureRecognizer(target:self, action: #selector(ChatVC.handleTap))
         view.addGestureRecognizer(tap)
+        
+        //Reveal VC Methods
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
+        //NotificationCenter Methods
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
         
@@ -51,6 +56,7 @@ class ChatVC: UIViewController {
         view.endEditing(true)
     }
     
+//Channel Methods
     func updateWithChannel() {
         let channelName = MessageService.instance.selectedChannel?.name ?? ""
         channelNameLbl.text = "#\(channelName)"
@@ -70,6 +76,7 @@ class ChatVC: UIViewController {
         }
     }
     
+//Message Methods
     func getMessages() {
         guard let channelId = MessageService.instance.selectedChannel?._id else { return }
         MessageService.instance.findAllMessagesForChannel(channelId: channelId) { (success) in
