@@ -66,7 +66,17 @@ class MessageService {
             if response.result.error == nil {
                 self.clearMessages()
                 guard let data = response.data else { return }
-                if let json = JSON(data: data).array {
+                
+                do {
+                    self.messages = try JSONDecoder().decode([Message].self, from: data)
+                } catch let error {
+                    debugPrint(error as Any)
+                }
+                debugPrint(self.messages)
+                completion(true)
+                
+                
+                /*if let json = JSON(data: data).array {
                     for item in json {
                         let messageBody = item["messageBody"].stringValue
                         let channelId = item["channelId"].stringValue
@@ -85,7 +95,7 @@ class MessageService {
                 } else {
                     debugPrint(response.result.error as Any)
                     completion(false)
-                }
+                }*/
             }
         }
     }
