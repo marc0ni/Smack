@@ -78,7 +78,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgk-TV-bOf">
-                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="627" width="330" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="SdZ-4w-QVi"/>
                                 </constraints>
@@ -100,7 +100,7 @@
                                 <rect key="frame" x="0.0" y="77" width="375" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="klO-gX-huP" customClass="MessageCell" customModule="Smack" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="klO-gX-huP" customClass="MessageCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="klO-gX-huP" id="702-mE-a9B">
@@ -126,7 +126,7 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="1nf-sy-QXJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalCompressionResistancePriority="749" text="Message" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="1nf-sy-QXJ">
                                                     <rect key="frame" x="70" y="36" width="285" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,7 +134,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="Tt2-nK-tIB" secondAttribute="trailing" constant="149" id="3Er-Fs-ezf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Tt2-nK-tIB" secondAttribute="trailing" constant="149" id="3Er-Fs-ezf"/>
                                                 <constraint firstItem="vg1-Ky-p29" firstAttribute="top" secondItem="NmK-iW-jHD" secondAttribute="top" id="CQT-TS-f7C"/>
                                                 <constraint firstItem="NmK-iW-jHD" firstAttribute="top" secondItem="702-mE-a9B" secondAttribute="topMargin" id="CYL-x4-dWa"/>
                                                 <constraint firstItem="1nf-sy-QXJ" firstAttribute="top" secondItem="vg1-Ky-p29" secondAttribute="bottom" constant="8" id="CbF-vC-cea"/>
@@ -156,6 +156,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikz-6d-JIf">
+                                <rect key="frame" x="8" y="605" width="41" height="16"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -165,9 +171,13 @@
                             <constraint firstItem="jgk-TV-bOf" firstAttribute="leading" secondItem="yA4-jD-4JS" secondAttribute="leading" id="OhG-Xx-hVg"/>
                             <constraint firstItem="FfZ-dw-P11" firstAttribute="leading" secondItem="yA4-jD-4JS" secondAttribute="leading" id="Qrj-1X-5V4"/>
                             <constraint firstItem="Oef-Dr-CFr" firstAttribute="centerY" secondItem="jgk-TV-bOf" secondAttribute="centerY" id="T1X-t6-pTi"/>
-                            <constraint firstItem="yA4-jD-4JS" firstAttribute="trailing" secondItem="jgk-TV-bOf" secondAttribute="trailing" id="Wpz-Ek-nx9"/>
+                            <constraint firstItem="yA4-jD-4JS" firstAttribute="trailing" secondItem="ikz-6d-JIf" secondAttribute="trailing" constant="326" id="U3b-d2-PzG"/>
+                            <constraint firstItem="yA4-jD-4JS" firstAttribute="trailing" secondItem="jgk-TV-bOf" secondAttribute="trailing" constant="45" id="Wpz-Ek-nx9"/>
+                            <constraint firstItem="jgk-TV-bOf" firstAttribute="top" secondItem="ikz-6d-JIf" secondAttribute="bottom" constant="6" id="YlW-ib-nXR"/>
+                            <constraint firstItem="ikz-6d-JIf" firstAttribute="top" secondItem="FfZ-dw-P11" secondAttribute="bottom" constant="8" id="aB6-b4-Xr9"/>
                             <constraint firstItem="xhO-39-zCl" firstAttribute="top" secondItem="K9E-MF-eN0" secondAttribute="top" id="bcf-kl-gAC"/>
                             <constraint firstItem="FfZ-dw-P11" firstAttribute="top" secondItem="xhO-39-zCl" secondAttribute="bottom" id="c4e-Xq-t83"/>
+                            <constraint firstItem="ikz-6d-JIf" firstAttribute="leading" secondItem="yA4-jD-4JS" secondAttribute="leading" constant="8" id="heN-aw-gFc"/>
                             <constraint firstItem="jgk-TV-bOf" firstAttribute="bottom" secondItem="yA4-jD-4JS" secondAttribute="bottom" id="klM-cc-n8R"/>
                             <constraint firstItem="xhO-39-zCl" firstAttribute="trailing" secondItem="yA4-jD-4JS" secondAttribute="trailing" id="w7j-2b-yZw"/>
                             <constraint firstItem="yA4-jD-4JS" firstAttribute="trailing" secondItem="Oef-Dr-CFr" secondAttribute="trailing" constant="8" id="zZ2-rY-7VU"/>
@@ -180,6 +190,7 @@
                         <outlet property="messageTxtBox" destination="jgk-TV-bOf" id="ACV-F0-88C"/>
                         <outlet property="sendBtn" destination="Oef-Dr-CFr" id="FOS-Y8-chy"/>
                         <outlet property="tableView" destination="FfZ-dw-P11" id="xif-u0-Yww"/>
+                        <outlet property="typingUsersLbl" destination="ikz-6d-JIf" id="zzU-hE-2IN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZM-zZ-0LF" userLabel="First Responder" sceneMemberID="firstResponder"/>

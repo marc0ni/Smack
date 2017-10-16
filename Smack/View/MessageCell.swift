@@ -19,6 +19,7 @@ class MessageCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
     
     func configureCell(message: Message) {
@@ -26,6 +27,8 @@ class MessageCell: UITableViewCell {
         userNameLbl.text = message.userName
         userImg.image = UIImage(named: message.userAvatar)
         userImg.backgroundColor = UserDataService.instance.returnUIColor(components: message.userAvatarColor)
+        self.sizeToFit()
+        self.layoutIfNeeded()
     }
     
     
