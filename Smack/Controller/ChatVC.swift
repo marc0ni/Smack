@@ -31,7 +31,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         //Tableview Methods
         tableView.delegate = self
-        tableView.datasource = self
+        tableView.dataSource = self
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
         sendBtn.isHidden = true
@@ -130,7 +130,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func messageBoxEditing(_ sender: Any) {
         if messageTxtBox.text == "" {
             isTyping = false
-            sendBtn.isHidden = ture
+            sendBtn.isHidden = true
         } else {
             if isTyping == false {
                 sendBtn.isHidden = false
