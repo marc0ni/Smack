@@ -16,14 +16,12 @@ The technique I learned could best be described as a "Master/Developer/Work" wor
 
 	4. Finalize project (TBD) -- after all of the Work branches are finally merged with the Developer branch, the Developer will then be merged into the Master branch.
 
-ADDING COCOAPODS PODS (LIBRARIES) TO INCREASE FUNCTIONALITY
-
+<b>ADDING COCOAPODS PODS (LIBRARIES) TO INCREASE FUNCTIONALITY</b><br>
 This app makes extensive use of four Cocoapods pods: Alamofire (for POSTing web requests and GETting web responses), SwiftyJSON (for parsing JSON requests into Swift code), Socket.IO-Client-Swift (for making socket connections) and Starscream (supplements the previous pod). 
 
 The SwiftyJSON pod was the reason I needed to keep Commented notes in the Developer branch. SwiftyJSON streamlines the process of parsing  JSON, but it's kind of a "black box" in the way it handles input data; SwiftyJSON's inputs are much simpler than the parameters usually used in JSON parsing. So in order to keep those usual parameters available for study, I've commented them out on the Developer branch. (The reason I've continued using SwiftyJSON in the first place is because this particular pod makes XCode's "do/try/catch" error handling so much easier to implement.)
 
-USING A HOSTING API AND A DATABASE
-
+<b>USING A HOSTING API AND A DATABASE</b><br>
 Since Smack is a web app it was necessary for me to establish an account with Heroku for hosting the server. For this app I installed Node.JS on the hosting server, using it in conjunction with mLab's database. These components comprised the server side of Smack which responded to these calls:
 
 	1. Registering a user
@@ -38,7 +36,7 @@ Since Smack is a web app it was necessary for me to establish an account with He
 	
 	6. Sending messages
   
- GROUPING FILES BY PURPOSE
+ <b>GROUPING FILES BY PURPOSE</b><br>
   
 
 
