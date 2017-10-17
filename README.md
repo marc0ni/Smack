@@ -5,7 +5,7 @@ This project was coded during the weeks leading up to the release of XCode 9, an
 
 The following is what I learned:
 
-BEST PRACTICES FOR USING GIT AS A PROFESSIONAL TOOL
+<b>BEST PRACTICES FOR USING GIT AS A PROFESSIONAL TOOL</b><br>
 The technique I learned could best be described as a "Master/Developer/Work" workflow, summarized as follows:
 
 	1. Initiate the project in Master -- here I imported assets and supporting files while also installing pods.
