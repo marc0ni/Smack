@@ -115,13 +115,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="vg1-Ky-p29">
-                                                    <rect key="frame" x="70" y="8" width="120" height="20"/>
+                                                    <rect key="frame" x="69.999999999999986" y="8" width="255.66666666666663" height="20"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="12:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="Tt2-nK-tIB">
-                                                    <rect key="frame" x="196" y="9.6666666666666643" width="61" height="17"/>
+                                                    <rect key="frame" x="333.66666666666669" y="10" width="60.333333333333314" height="17"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -134,14 +134,16 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Tt2-nK-tIB" secondAttribute="trailing" constant="149" id="3Er-Fs-ezf"/>
+                                                <constraint firstItem="1nf-sy-QXJ" firstAttribute="top" secondItem="Tt2-nK-tIB" secondAttribute="bottom" constant="9" id="7Jk-kl-hx3"/>
                                                 <constraint firstItem="vg1-Ky-p29" firstAttribute="top" secondItem="NmK-iW-jHD" secondAttribute="top" id="CQT-TS-f7C"/>
                                                 <constraint firstItem="NmK-iW-jHD" firstAttribute="top" secondItem="702-mE-a9B" secondAttribute="topMargin" id="CYL-x4-dWa"/>
                                                 <constraint firstItem="1nf-sy-QXJ" firstAttribute="top" secondItem="vg1-Ky-p29" secondAttribute="bottom" constant="8" id="CbF-vC-cea"/>
+                                                <constraint firstItem="1nf-sy-QXJ" firstAttribute="top" secondItem="vg1-Ky-p29" secondAttribute="bottom" constant="8" id="DAn-dC-5FJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Tt2-nK-tIB" secondAttribute="trailing" constant="12" id="ECK-hu-hSM"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="1nf-sy-QXJ" secondAttribute="bottom" constant="15" id="Jnd-QG-m43"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="1nf-sy-QXJ" secondAttribute="trailing" constant="12" id="f7m-I2-fG9"/>
                                                 <constraint firstItem="Tt2-nK-tIB" firstAttribute="centerY" secondItem="vg1-Ky-p29" secondAttribute="centerY" id="fgZ-1H-gAw"/>
-                                                <constraint firstItem="Tt2-nK-tIB" firstAttribute="leading" secondItem="vg1-Ky-p29" secondAttribute="trailing" constant="6" id="hg6-mW-Wyk"/>
+                                                <constraint firstItem="Tt2-nK-tIB" firstAttribute="leading" secondItem="vg1-Ky-p29" secondAttribute="trailing" constant="8" id="iq6-oc-3bY"/>
                                                 <constraint firstItem="vg1-Ky-p29" firstAttribute="leading" secondItem="NmK-iW-jHD" secondAttribute="trailing" constant="12" id="sxO-b4-LIf"/>
                                                 <constraint firstItem="NmK-iW-jHD" firstAttribute="leading" secondItem="702-mE-a9B" secondAttribute="leadingMargin" id="vLP-pb-uBg"/>
                                                 <constraint firstItem="1nf-sy-QXJ" firstAttribute="leading" secondItem="NmK-iW-jHD" secondAttribute="trailing" constant="12" id="w6L-HG-g21"/>
@@ -195,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZM-zZ-0LF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1461.5999999999999" y="457.42128935532236"/>
+            <point key="canvasLocation" x="1460.8695652173915" y="457.33695652173918"/>
         </scene>
         <!--ChannelVC-->
         <scene sceneID="hWV-Ft-H9d">

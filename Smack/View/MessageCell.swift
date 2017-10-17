@@ -30,6 +30,7 @@ class MessageCell: UITableViewCell {
         self.sizeToFit()
         self.layoutIfNeeded()
         
+        // ISO time conversion
         guard var isoDate = message.timeStamp else { return }
         let start = isoDate.index(isoDate.startIndex, offsetBy: 0)
         let end = isoDate.index(isoDate.endIndex, offsetBy: -5)
@@ -45,15 +46,5 @@ class MessageCell: UITableViewCell {
             let finalDate = newFormatter.string(from: finalDate)
             timeStampLbl.text = finalDate
         }
-        
     }
-    
-    /*func isoDateConvert(_ from: Int) -> String {
-        
-        
-        let start = index(startIndex, offsetBy: from)
-        return String(self[start ..< endIndex])
-    }*/
-    
-    
 }
