@@ -6,7 +6,6 @@ This project was coded during the weeks leading up to the release of XCode 9, an
 The following is what I learned:
 
 BEST PRACTICES FOR USING GIT AS A PROFESSIONAL TOOL
-
 The technique I learned could best be described as a "Master/Developer/Work" workflow, summarized as follows:
 
 	1. Initiate the project in Master -- here I imported assets and supporting files while also installing pods.
@@ -28,10 +27,15 @@ USING A HOSTING API AND A DATABASE
 Since Smack is a web app it was necessary for me to establish an account with Heroku for hosting the server. For this app I installed Node.JS on the hosting server, using it in conjunction with mLab's database. These components comprised the server side of Smack which responded to these calls:
 
 	1. Registering a user
+	
 	2. Logging in a user
+	
 	3. Providing channels
+	
 	4. Providing sockets
+	
 	5. Fetching messages
+	
 	6. Sending messages
   
  GROUPING FILES BY PURPOSE
