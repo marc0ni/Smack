@@ -24,12 +24,12 @@ The SwiftyJSON pod was the reason I needed to keep Commented notes in the Develo
 USING A HOSTING API AND A DATABASE
 Since Smack is a web app it was necessary for me to establish an account with Heroku for hosting the server. For this app I installed Node.JS on the hosting server, using it in conjunction with mLab's database. These components comprised the server side of Smack which responded to these calls:
 
-  a. Registering a user
-  b. Logging in a user
-  c. Providing channels
-  d. Providing sockets
-  e. Fetching messages
-  f. Sending messages
+1. Registering a user
+2. Logging in a user
+3. Providing channels
+4. Providing sockets
+5. Fetching messages
+6. Sending messages
   
  GROUPING FILES BY PURPOSE
   
