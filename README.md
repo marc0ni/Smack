@@ -46,10 +46,10 @@ Since Smack is a web app it was necessary for me to establish an account with He
 		(d) Maintain the socket once a user has been logged in
 		
 	2. Utilities -- this folder consists of a single file holding all of the constants used in the app. The constants fall into these 			categories:
-		(a) URL -- used for interacting with the server
+		(a) URLs -- used for interacting with the server
 		(b) Colors -- an accent color used throughout the UI
 		(c) Notification -- used to communicate changes-of-state within the app
-		(d) Segues
+		(d) Segues -- simplified the transitions between VCs, especially for the modals and for unwinding
 		(e) User defaults -- also used for interacting with the server
 		(f) Headers -- used as part of the URLs
   
