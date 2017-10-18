@@ -37,6 +37,20 @@ Since Smack is a web app it was necessary for me to establish an account with He
 	6. Sending messages
   
  <b>GROUPING FILES BY PURPOSE</b><br>
+ Besides the usual Model, View, and Controller groups, the app also groups files by their purpose. To that end there are these other groups:
+ 
+ 	1. Services -- these files work in conjunction with the Cocoapod libraries mentioned above to 
+		(a) Authorize users on the app
+		(b) Organize users' data while they use the app
+		(c) Handle messages
+		(d) Maintain the socket once a user has been logged in
+	2. Utilities -- this folder consists of a single file holding all of the constants used in the app. The constants fall into these 			categories:
+		(a) URL -- used for interacting with the server
+		(b) Colors -- an accent color used throughout the UI
+		(c) Notification -- used to communicate changes-of-state within the app
+		(d) Segues
+		(e) User defaults -- also used for interacting with the server
+		(f) Headers -- used as part of the URLs
   
 
 
