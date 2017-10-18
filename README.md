@@ -43,12 +43,12 @@ Since Smack is a web app it was necessary for me to establish an account with He
 	2. Utilities -- this folder consists of a single file holding all of the constants used in the app. The constants fall into these 			categories:
 		(a) URLs -- used for interacting with the server
 		(b) Colors -- an accent color used throughout the UI
-		(c) Notification -- used to communicate changes-of-state within the app
+		(c) Notifications -- used to communicate changes-of-state within the app
 		(d) Segues -- simplified the transitions between VCs, especially for the modals and for unwinding
 		(e) User defaults -- also used for interacting with the server
 		(f) Headers -- used as part of the URLs
 		
-<bCOMPLETION HANDLERS</b><br>
+<b>COMPLETION HANDLERS</b><br>
   
 
 
