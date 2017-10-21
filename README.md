@@ -49,9 +49,7 @@ Since Smack is a web app it was necessary for me to establish an account with He
 		(f) Headers -- used as part of the URLs
 		
 <b>COMPLETION HANDLERS</b><br>
-  
-
-
+This is a technique for making remote requests and receiving data in return.
 
 
 
