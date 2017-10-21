@@ -1,4 +1,4 @@
-# Smack -- Chat App
+# Smack -- Chat App (Networking, APIs, REST)
 This is a project I have been coding under the instruction of the Udemy online course <i>iOS 11 & Swift 4: From Beginner to Paid Professional</i>. 
 
 This project was coded during the weeks leading up to the release of XCode 9, and then after its final release; the video instructions themselves were recorded in July 2017. As a result, much of what I was learning had been/was being deprecated while I was learning. In practical terms that meant I was learning to think *beyond* the lessons themselves as I completed the work just to bridge the gap.
